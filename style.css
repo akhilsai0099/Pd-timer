@@ -37,16 +37,9 @@ body {
     font-size: 80px;
     position: absolute;
     top: -35px;
-    height: fit-content;
+    height: 40px;
     right: 10px;
-}
-
-.minus {
-    font-size: 60px;
-    position: absolute;
-    top: -10px;
-    height: fit-content;
-    left: 15px;
+    cursor: pointer;
 }
 
 .title {
@@ -75,4 +68,52 @@ body {
 
 .start:active {
     transform: scaleY(0.9);
+}
+
+.setTimerContainer {
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0s 0.5s;
+}
+
+.setTimerContainer.show {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+
+}
+
+.setTimerP {
+    padding: 5px 5px 5px 5px;
+    font-size: 40px;
+    background-color: transparent;
+
+    text-align: center;
+    align-items: center;
+    height: fit-content;
+}
+
+.setTimerP:focus {
+    border: 2px solid white;
+    outline: none;
+    border-radius: 10px;
+}
+
+.setTimerP:nth-child(2) {
+    padding: 5px 0px;
+}
+
+.setTimerP:first-child {
+    padding: 5px 0px 5px 5px;
+}
+
+.setTimerP:last-child {
+    padding: 5px 5px 5px 0px;
+}
+
+.timecontainer {
+    display: flex;
 }
